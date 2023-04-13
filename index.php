@@ -17,14 +17,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            sessionStorage.clear();
             $("#btn-add").click(function (e) { 
+               
                 e.preventDefault();
-                sessionStorage.clear();
+                
                 // console.log("Button Clicked!");
 
                 //session storage
                 var count = sessionStorage.getItem("count");
+                
                 if(count==null){
+                  
                     count = 1;
                 }
                 $.ajax({
