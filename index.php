@@ -22,9 +22,7 @@
                
                 e.preventDefault();
                 
-                // console.log("Button Clicked!");
-
-                //session storage
+                 //session storage
                 var count = sessionStorage.getItem("count");
                 
                 if(count==null){
@@ -39,8 +37,7 @@
                     },
                     dataType: "json",
                     success: function (response) {
-                        // console.log(response);
-                        //Update count 
+                         //Update count 
                         count = response.count;
                         //Update session count
                         sessionStorage.setItem("count", count);
